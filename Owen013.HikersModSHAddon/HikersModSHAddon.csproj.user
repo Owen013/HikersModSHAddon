@@ -1,0 +1,13 @@
+﻿<Project>
+  <PropertyGroup>
+    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen_013.HikersModSHCompatibility</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HikersMod">
+      <HintPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen013.MovementMod\HikersMod.dll</HintPath>
+    </Reference>
+    <Reference Include="SmolHatchling">
+      <HintPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen013.TeenyHatchling\SmolHatchling.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
