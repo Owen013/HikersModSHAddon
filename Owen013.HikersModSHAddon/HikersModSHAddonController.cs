@@ -37,19 +37,19 @@ namespace HikersModSHCompatibility
             HikersModController.Instance.UpdateAnimSpeed();
         }
 
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(HikersModController), nameof(HikersModController.ChangeAttributes))]
-        //public static void SetStoryModeAttributes(HikersModController __instance)
-        //{
-        //    if (StoryController.Instance._storyEnabledNow)
-        //    {
-        //        {
-        //            __instance._normalSpeed = 4;
-        //            __instance._walkSpeed = 2;
-        //            __instance._jumpPower = 5;
-        //            __instance._sprintSpeed = 8;
-        //        }
-        //    };
-        //}
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(HikersModController), nameof(HikersModController.ChangeAttributes))]
+        public static void SetStoryModeAttributes(HikersModController __instance)
+        {
+            if (StoryController.Instance._storyEnabledNow)
+            {
+                {
+                    __instance._normalSpeed = 4;
+                    __instance._walkSpeed = 2;
+                    __instance._jumpPower = 5;
+                    __instance._sprintSpeed = 8;
+                }
+            };
+        }
     }
 }
