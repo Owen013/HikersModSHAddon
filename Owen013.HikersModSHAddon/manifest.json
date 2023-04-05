@@ -3,8 +3,8 @@
   "filename": "HikersModSHAddon.dll",
   "author": "Owen_013",
   "name": "Hiker's Mod Compatibility with Smol Hatchling",
-  "uniqueName": "Owen_013.HikersModSHCompatibility",
-  "version": "0.1.0",
+  "uniqueName": "Owen013.HikersModSHAddon",
+  "version": "1.0.0",
   "owmlVersion": "2.9.0",
   "dependencies": [ "Owen013.MovementMod", "Owen013.TeenyHatchling" ]
 }

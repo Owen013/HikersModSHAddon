@@ -1,6 +1,6 @@
 ﻿<Project>
   <PropertyGroup>
-    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen_013.HikersModSHCompatibility</OutputPath>
+    <OutputPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen013.HikersModSHAddon</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HikersMod">

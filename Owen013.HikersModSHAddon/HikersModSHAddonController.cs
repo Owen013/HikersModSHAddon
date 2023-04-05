@@ -8,10 +8,14 @@ namespace HikersModSHCompatibility
 {
     public class HikersModSHAddonController : ModBehaviour
     {
-        public void Start()
+        public void Awake()
         {
             Harmony.CreateAndPatchAll(typeof(HikersModSHAddonController));
-            ModHelper.Console.WriteLine("Hiker's Mod compatibility addon for Smol Hatchling is ready to go!", OWML.Common.MessageType.Success);
+        }
+
+        public void Start()
+        {
+            ModHelper.Console.WriteLine("Hiker's Mod Compatibility for Smol Hatchling is ready to go!", OWML.Common.MessageType.Success);
         }
 
         [HarmonyPrefix]
@@ -23,6 +27,14 @@ namespace HikersModSHCompatibility
             else if (__instance._moveSpeed == MoveSpeed.DreamLantern) __instance._animController._animator.speed = Mathf.Max(__instance._dreamLanternSpeed / 6 * multiplier, multiplier);
             else __instance._animController._animator.speed = Mathf.Max(__instance._characterController._runSpeed / 6 * multiplier, multiplier);
             return false;
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SmolHatchlingController), nameof(SmolHatchlingController.UpdatePlayerScale))]
+        public static void OnSmolHatchlingSizeChanged(SmolHatchlingController __instance)
+        {
+            if (!__instance.IsCorrectScene() || !__instance._characterLoaded) return;
+            HikersModController.Instance.UpdateAnimSpeed();
         }
 
         //[HarmonyPrefix]
