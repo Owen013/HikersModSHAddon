@@ -1,1 +1,1 @@
-# Owen013.HikersModSHAddon
+# Hiker's Mod Compatibility for Smol Hatchling
