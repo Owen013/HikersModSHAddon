@@ -5,9 +5,11 @@
   <ItemGroup>
     <Reference Include="HikersMod">
       <HintPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen013.MovementMod\HikersMod.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="SmolHatchling">
       <HintPath>$(AppData)\OuterWildsModManager\OWML\Mods\Owen013.TeenyHatchling\SmolHatchling.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
 </Project>
